@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20sp">
+    <AutoCompleteTextView
+
+        android:id="@+id/auto_country"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@drawable/edittext_bg"
+        android:hint="@string/search1"
+        android:visibility="gone"
+        android:paddingStart="15sp">
+    </AutoCompleteTextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_country"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/auto_country"
+        android:layout_marginTop="20dp"
+        android:visibility="visible" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/pb"
+        android:visibility="gone"></ProgressBar>
+    <TextView
+        android:id="@+id/tx_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"></TextView>
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context="com.gpd.gpdimg.activity.ImageCapture">
+
+
+    <TextView android:id="@+id/tv_report_label_AccidentToReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_marginTop="26dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:text="ACCIDENT TO REPORT ?"/>
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_car_accident_AccidentToReport"
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/tv_report_label_AccidentToReport"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_car_accident" />
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/container_button_AccidentToReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/details_container_AccidentToReport"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/add_details_bg"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Details"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/details_container_AccidentToReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/container_check_cross_AccidentToReport"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/iv_accident_image_container_AccidentToReport"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/gradient_bg"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/tv_skip_AccidentToReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_accident_image_container_AccidentToReport"
+        android:layout_above="@+id/container_check_cross_AccidentToReport"
+        android:orientation="vertical"
+        tools:ignore="NotSibling">
+
+
+        <TextView
+            android:id="@+id/remarks"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="Remarks"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:visibility="visible"></TextView>
+
+
+        <EditText
+            android:id="@+id/purpose"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:editable="false"
+            android:drawableEnd="@drawable/down_arrow1"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="Select Remarks"
+            android:textAlignment="center"
+            android:paddingStart="10sp"
+            android:paddingEnd="20sp"
+            android:textColorHint="@color/blue"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container_check_cross_AccidentToReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="18dp"
+        android:orientation="horizontal">
+
+
+        <Button android:id="@+id/iv_check_mark_AccidentToReport"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="12dp"
+            android:text="NEXT"
+            android:textSize="24sp"
+            android:background="@color/colorPrimary"
+            />
+        <ImageView android:id="@+id/iv_camera_AccidentToReport"
+            android:layout_width="72dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_camera_circle"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
